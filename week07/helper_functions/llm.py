@@ -34,7 +34,7 @@ import tiktoken
 # ======================================================================
 # Global variables
 
-FILEPATH_DOTENV = "../../../.env"
+FILEPATH_DOTENV = "../../.env"
 FILEPATH_COURSES_FULL = "./data/courses-full.json"
 
 # ======================================================================

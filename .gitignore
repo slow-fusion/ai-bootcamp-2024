@@ -10,6 +10,9 @@ lib64
 share/
 pyvenv.cfg
 
+# Streamlit
+*/.streamlit/secrets.toml
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

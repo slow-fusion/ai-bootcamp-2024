@@ -25,6 +25,13 @@ import json
 
 import helper_functions.llm
 
+# imports for langchain
+import langchain
+import langchain.prompts
+import langchain.chains
+import langchain_openai.embeddings
+import langchain_chroma
+
 # ======================================================================
 # Global variables
 
@@ -181,6 +188,47 @@ def process_user_message(user_input):
 
     return (reply, course_details)
 
+# Functions to retrieve RAG queries
+filepath_vector_store = "./data/chroma_langchain_db"
+
+# Specify embedding model
+embeddings_model = langchain_openai.embeddings.OpenAIEmbeddings(
+    model="text-embedding-3-small"
+)
+
+vector_store = langchain_chroma.Chroma(
+    "ai_bootcamp_info_deck",
+    embedding_function=embeddings_model,
+    persist_directory=filepath_vector_store,
+)
+
+def rag_answer_query(user_query):
+    """Answer the given user_query, using the vector_store."""
+
+
+    # Build prompt
+    template = """
+Use the following pieces of context to answer the question at the end. 
+If you don't know the answer, just say you don't know, and don't try to 
+make up an answer. Always say 'thanks for asking.' at the end of the answer.
+
+Context: {context}
+Question: {question}
+Answer: 
+    """
+    qa_chain_prompt = langchain.prompts.PromptTemplate.from_template(template)
+
+    # Run chain
+    qa_chain = langchain.chains.RetrievalQA.from_chain_type(
+        langchain_openai.ChatOpenAI(model="gpt-4o-mini"),
+        retriever=vector_store.as_retriever(),
+        return_source_documents=True,  # Make inspection of documents possible
+        chain_type_kwargs={"prompt": qa_chain_prompt},
+    )
+
+    answer = qa_chain.invoke(user_query)
+
+    return answer["result"]
 
 # ======================================================================
 # Main script

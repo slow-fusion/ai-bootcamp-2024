@@ -66,17 +66,18 @@ def main():
     user_prompt = form.text_area("Enter your prompt here", height=200)
 
     if form.form_submit_button("Submit"):
-        st.toast("User Input Submitted - {user_prompt}")
-        response, course_details = logics.customer_query_handler.process_user_message(
-            user_prompt
-        )
+        st.toast(f"User Input Submitted - {user_prompt}")
+        #response, course_details = logics.customer_query_handler.process_user_message(
+        #    user_prompt
+        #)
+        response = logics.customer_query_handler.rag_answer_query(user_prompt)
 
         st.write(response)
 
         st.divider()
 
-        df_course_details = pd.json_normalize(course_details)
-        st.dataframe(df_course_details)
+        #df_course_details = pd.json_normalize(course_details)
+        #st.dataframe(df_course_details)
 
         print(f'User Input is "{user_prompt}"')
 

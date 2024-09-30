@@ -111,20 +111,20 @@ def get_completion_by_messages(
 
 # Functions for Token Counting
 def count_tokens(text):
-    """ Returns the number of tokens in the given text.
-    """
+    """Returns the number of tokens in the given text."""
 
     encoding = tiktoken.encoding_for_model("gpt-4o-mini")
     return len(encoding.encode(text))
 
 
 def count_tokens_from_message(messages):
-    """ Returns the number of tokens in the given message.
-    """
+    """Returns the number of tokens in the given message."""
 
     encoding = tiktoken.encoding_for_model("gpt-4o-mini")
     value = " ".join([x.get("content") for x in messages])
     return len(encoding.encode(value))
+
+
 
 
 # ======================================================================
@@ -135,10 +135,11 @@ client = openai.OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 
 def main():
-    """ Informs user that this file is meant to be run directly.
-    """
-    print("This file contains helper functions for use with OpenAI API.\n"
-          "It is not meant to be run directly.")
+    """Informs user that this file is meant to be run directly."""
+    print(
+        "This file contains helper functions for use with OpenAI API.\n"
+        "It is not meant to be run directly."
+    )
 
 
 # End of main script

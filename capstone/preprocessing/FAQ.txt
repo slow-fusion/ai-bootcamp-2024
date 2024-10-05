@@ -1,0 +1,131 @@
+FAQs
+Questions Related to Training
+	
+
+Question: Do we have to submit assignments and conduct peer-review, like in Data Champions Bootcamp?
+
+Answer: No. There will not be weekly assignment submissions and thus no peer-reviews. Participants are required to pass all the three quizzes (65% correct answers to pass) and submit their Proof-of-Concept Prototypes by the stipulated deadline. See the slide on completion requirements.
+
+
+Question: What happens if I have to go on holiday or official duties during the bootcamp?
+
+Answer: This programme is catered for self-directed adult learners, so participants are expected to manage their time to complete the quizzes/submissions. We’ve also made the workshops attendance optional to offer flexibility. Deadlines for quizzes and submissions will also be provided in advance to help you plan your time.
+
+
+Question: What are topics that will not be covered?
+
+Answer: As an intermediate-tier training program, AI Champions Bootcamp focuses on applying LLMs to achieve practical outputs, allowing the officers to quickly experiment with their ideas. The program will not cover topics, such as architecture of LLMs and transformer models, LLM fine-tuning, or adaptation of Language Models.
+
+
+Question: If I don’t complete the bootcamp, can I continue where I left off next year and get the completion badge?
+
+Answer: Nope. The bootcamp content will refresh every year and the technology moves rapidly.
+
+
+Question: Will the Friday Q&A Session be recorded?
+
+Answer: Yes, the sessions will be recorded. The recording will be made available on this platform, placed under each respective week.
+The recording will typically be available by the end of the Friday.
+
+
+Question: Will the weekly content be released earlier?
+
+Answer: No. The weekly content will be released according to the weekly schedule. 
+The content will typically made available on this platform over the weekends prior to the indicated week.
+Participants can turn on the notification for "Course Content" to receive the notification once the content is available. 
+This setting can be found on this page.
+
+ 
+Questions Related to APIs, Tools, Software
+	
+
+Question: I have a premium subscription for ChatGPT Plus. Do I still need to pay to use OpenAI APIs?
+
+Answer: Yes, you will still need to pay to use the OpenAI APIs. The premium subscription covers the cost for ChatGPT Plus service only. Additional charges will apply when calling OpenAI APIs as they are considered separate services provided by OpenAI.
+
+
+Question: Will there be instructions on how we can subscribe, pay, monitor and limit usage on OpenAPI APIs?
+
+Answer: Yes. Instructions on how participants will access/pay for the OpenAI will be available after onboarding to the learning management system (LMS).
+
+
+Question: Will I be able to claim for the cost of API usage?
+
+Answer: Do check with your Agency HR on claims. GovTech will not reimburse any costs that you incur from joining the bootcamp
+
+
+Question: Can I use any other LLMs than the suggested OpenAI APIs?
+
+Answer: We do not recommend this and only if they are confident to do so. The training requires use of LLMs and embedding model(s) that are compatible with OpenAI’s Python SDK. You are expected to diagnose and resolve the technical issues that may arise due to the use of other APIs or LLMs. If a participant is unsure or unfamiliar with how to set up and use alternative LLMs via OpenAI’s Python SDK (as used throughout the training materials), it is strongly recommended to stick with OpenAI APIs. This approach allows them to better focus on the key learning.
+
+
+Question: Why use OpenAI APIs for the content in this Bootcamp?
+
+Answer: A key learning outcome of this Bootcamp is to understand the capabilities of LLMs and the ability to apply the techniques/technology to solve practical problems. OpenAI APIs service is just one of the many tools to implement the techniques/technology. OpenAI APIs is chosen as the tool in this programme because a) it can be set up easily to access multiple state-of-the-art models without going through technically complex process, b) it provides good value per usage cost, and c) the way of calling LLMs through OpenAI's Software Development Kit (SDK) that we cover in this programme is not limited to just calling OpenAI's models, it can also be used with other many other compatible models (such as open-source models, Google's Gemini, and more) via framework such as HuggingFace's Text Generation Interface (TGI) and LiteLLM. This means the techniques the participants learn and the code that they develop can be reused for other compatible models without starting from scratch.
+
+ 
+Questions Related to Project / Proof-of-Concepts Prototype
+
+
+Question: What are the considerations for agency’s projects / problem statements that my Proof-of-Concept Prototype will be based on?
+
+Answer: This largely depends on the classification of the app/data used due to the API services and hosting platform(s), which should be only up to ”Official (Closed)/Non-Sensitive”. This can be achieved by using dummy/synthetic data for purpose of building the prototype.
+
+
+Question: How will I know if my Agency is coordinating for use-cases or demo day?
+
+Answer: We will share this info only after registration closes so that we can reach out to selected Agencies.
+
+
+Question: If I choose to work on my agency use-case for PoC, do I need to seek agency or GovTech approval?
+
+Answer: There is no need to seek GovTech approval for agency use-cases but you should check with your supervisor if they can be used for the bootcamp.
+
+ 
+Questions Related to Registration
+	
+
+Question: Do I have to pay to join AI Champions Bootcamp?
+
+Answer: There are no fees (for now) to join the bootcamp. As such, participants are required to pay for their own usage of the OpenAI APIs as participants will be using/calling OpenAI’s models via code (see "Bring-Your-Own Key" page on the info deck https://go.gov.sg/abc-info).
+
+
+Question: Do I have to get the approval from my supervisor or agency to join the Bootcamp?
+
+Answer: GovTech will not require approvals from participant’s supervisor or Agency to be accepted into the bootcamp. Do check with your agency HR on internal policies on participation in external events or training programs.
+
+
+Question: Can I join the Bootcamp for self-directed learning and if I do not need the cert?
+
+Answer: Yes, you can. You can register using the same registration form. You will be treated as a regular participant.
+
+
+Question: Will my agency know that I participate in the program?
+
+Answer: Yes. the list of participants and completion status will be shared/published, since many agencies may need the list for reporting purposes.
+
+
+Question: Can temp staff or interns join the Bootcamp?
+
+Answer: All participants holding a valid gov.sg email, at the points of: a) registration AND b) completion, can join and complete the program to obtain the completion cert/badge. Completion badge/cert is tied to gov.sg email and will not be issued nor transferred to a personal email.
+
+
+Question: Can public officers holding other email domains join the bootcamp?
+
+Answer: Yes, public officers such as those from polytechnics, MOE schools, and A*STAR are welcomed to join
+
+
+Question: How can I get the completion certificate/badge?
+
+Answer: As long as the participant has access to a gov.sg email, at the points of: a) registration AND b) completion, they can join and complete the program to obtain the completion cert/badge. Completion badge/cert is tied to official email and will not be issued/transferred to personal email.
+
+
+Question: What are the hardware specifications needed for the laptop/desktop?
+
+Answer: A regular laptop or desktop that can perform reasonably well for day-to-day work (e.g. multi-tasking with MS Teams, heavy PowerPoint slides, and web browsing) will do. Bootcampers will be not expected run heavy computations on their device. No tablets/Ipad as those devices are unable to install the required software.
+
+
+Question: I cannot get a laptop with full administrator right and unrestricted Internet access by the start of training.
+What can I do?
+
+Answer: You should get the laptop as soon as possible. As a last resort, you can use any laptop that can access Internet and allows you to access Google Colab for the first half of the training phase. Even so, this is not recommended as Google Colab can be very buggy especially on GSIB. You should get the required device before the first half of the training phase ends (i.e. week 4). There will be no extensions/exceptions to completion/graduation due to lack of device access/availability.

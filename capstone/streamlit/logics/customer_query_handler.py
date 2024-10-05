@@ -197,7 +197,7 @@ embeddings_model = langchain_openai.embeddings.OpenAIEmbeddings(
 )
 
 vector_store = langchain_chroma.Chroma(
-    "ai_bootcamp_info_deck",
+    collection_name="ai_bootcamp_info_deck",
     embedding_function=embeddings_model,
     persist_directory=filepath_vector_store,
 )
@@ -208,6 +208,8 @@ def rag_answer_query(user_query):
 
     # Build prompt
     template = """
+You are an AI assistant tasked to answer question regarding a course 
+called AI Bootcamp.
 Use the following pieces of context to answer the question at the end. 
 If you don't know the answer, just say you don't know, and don't try to 
 make up an answer. Always say 'thanks for asking.' at the end of the answer.

@@ -2,16 +2,11 @@
 test/
 notebooks/
 
-# venv / pip files
-bin/
-etc/
-include/
-lib64
-share/
-pyvenv.cfg
+# Chroma database
+chroma_langchain_db/
 
-# Streamlit
-*/.streamlit/secrets.toml
+# Streamlit secret directory
+.streamlit/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

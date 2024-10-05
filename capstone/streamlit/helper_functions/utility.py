@@ -17,7 +17,7 @@ This includes the sidebar, the title, the footer, and the password check.
 # ======================================================================
 # Common imports
 
-import random
+import os
 
 import hmac
 import streamlit as st
@@ -40,7 +40,9 @@ def check_password():
     def password_entered():
         """Checks whether a password entered by the user is correct."""
 
-        if hmac.compare_digest(st.session_state["password"], st.secrets["password"]):
+        main_password = os.getenv("MAIN_PASSWORD")
+
+        if hmac.compare_digest(st.session_state["password"], main_password):
             st.session_state["password_correct"] = True
             del st.session_state["password"]  # Don't store password
         else:

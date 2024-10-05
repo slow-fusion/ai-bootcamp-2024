@@ -52,8 +52,8 @@ def main():
     # endregion <----------- Streamlit App Configuration -------------->
 
     # Check if the user gave the correct password
-    # if not helper_functions.utility.check_password():
-    #     st.stop()
+    if not helper_functions.utility.check_password():
+        st.stop()
 
     st.title("Streamlit App")
 

@@ -79,16 +79,40 @@ def get_aisay_authtoken():
     return access_token
 
 
-def load_document():
+def load_pdf(filename):
     """
     Given a string to a PDF, load it and return a list of Document object
     corresponding to each page.
     """
 
-    loader = langchain_community.document_loaders.PyPDFLoader(
-        "AI_Champion_Bootcamp_-_Pilot_02_-_Info_Deck.pdf"
-    )
+    loader = langchain_community.document_loaders.PyPDFLoader(filename)
     pages = loader.load()
+
+    return pages
+
+
+def load_text(filename):
+    """
+    Given a string to a text file, load it and return a single Document
+    object.
+    """
+
+    loader = langchain_community.document_loaders.TextLoader(filename)
+
+    return loader.load()
+
+
+def load_document():
+    """
+    Load all the source documents.
+    """
+
+    # Load document 1
+    pages = load_pdf("AI_Champion_Bootcamp_-_Pilot_02_-_Info_Deck.pdf")
+
+    # Load document 2
+    for page in load_text("FAQ.txt"):
+        pages.append(page)
 
     return pages
 
@@ -141,6 +165,7 @@ def test_run():
     """Test run of created scripts."""
 
     pages = load_document()
+
     splitted_documents = split_text(pages)
     vector_store = create_vector_store(splitted_documents)
 

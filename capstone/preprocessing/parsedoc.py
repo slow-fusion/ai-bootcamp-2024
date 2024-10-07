@@ -111,8 +111,12 @@ def load_document():
     pages = load_pdf("AI_Champion_Bootcamp_-_Pilot_02_-_Info_Deck.pdf")
 
     # Load document 2
-    for page in load_text("FAQ.txt"):
-        pages.append(page)
+    pages.extend(
+        load_pdf("AI_Champion_Bootcamp_-_Pilot_02_-_Project_Phase_Info_Deck.pdf")
+    )
+
+    # Load document 3
+    pages.extend(load_text("FAQ.txt"))
 
     return pages
 

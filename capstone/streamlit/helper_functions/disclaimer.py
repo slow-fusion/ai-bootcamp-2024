@@ -33,12 +33,13 @@ FILEPATH_DISCLAIMER = "./data/disclaimer.txt"
 
 
 def display_disclaimer():
+    """Display the disclaimer text on the page."""
 
-    with open(FILEPATH_DISCLAIMER, "r") as f:
-        DISCLAIMER = f.read()
+    with open(FILEPATH_DISCLAIMER, "r", encoding="utf-8") as f:
+        disclaimer = f.read()
 
     with st.expander("Disclaimer"):
-        st.write(DISCLAIMER)
+        st.write(disclaimer)
 
 
 # ======================================================================

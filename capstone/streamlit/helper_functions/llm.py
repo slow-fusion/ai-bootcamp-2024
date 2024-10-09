@@ -125,8 +125,6 @@ def count_tokens_from_message(messages):
     return len(encoding.encode(value))
 
 
-
-
 # ======================================================================
 # Main script
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-""" Use AISAY to parse the documents into structured data.
+""" Collection of scripts to parse the documents into Chroma_DB.
 """
 
 # ======================================================================
@@ -20,9 +20,10 @@ import requests
 
 import dotenv
 import tiktoken
-import langchain_community.document_loaders
-import langchain_experimental.text_splitter
-import langchain_openai.embeddings
+from langchain_community.document_loaders import PyPDFLoader
+from langchain_community.document_loaders import TextLoader
+from langchain_experimental.text_splitter import SemanticChunker
+from langchain_openai.embeddings import OpenAIEmbeddings
 import langchain_chroma
 
 # ======================================================================
@@ -85,7 +86,7 @@ def load_pdf(filename):
     corresponding to each page.
     """
 
-    loader = langchain_community.document_loaders.PyPDFLoader(filename)
+    loader = PyPDFLoader(filename)
     pages = loader.load()
 
     return pages
@@ -97,7 +98,7 @@ def load_text(filename):
     object.
     """
 
-    loader = langchain_community.document_loaders.TextLoader(filename)
+    loader = TextLoader(filename)
 
     return loader.load()
 
@@ -107,8 +108,10 @@ def load_document():
     Load all the source documents.
     """
 
+    pages = []
+
     # Load document 1
-    pages = load_pdf("AI_Champion_Bootcamp_-_Pilot_02_-_Info_Deck.pdf")
+    pages.extend(load_pdf("AI_Champion_Bootcamp_-_Pilot_02_-_Info_Deck.pdf"))
 
     # Load document 2
     pages.extend(
@@ -133,9 +136,7 @@ def split_text(pages):
     #    chunk_overlap=50,
     #    length_function=count_tokens
     # )
-    text_splitter = langchain_experimental.text_splitter.SemanticChunker(
-        langchain_openai.embeddings.OpenAIEmbeddings(model="text-embedding-3-small")
-    )
+    text_splitter = SemanticChunker(OpenAIEmbeddings(model="text-embedding-3-small"))
 
     splitted_documents = text_splitter.split_documents(pages)
 
@@ -150,9 +151,7 @@ def create_vector_store(splitted_documents):
     """
 
     # Specify embedding model
-    embeddings_model = langchain_openai.embeddings.OpenAIEmbeddings(
-        model="text-embedding-3-small"
-    )
+    embeddings_model = OpenAIEmbeddings(model="text-embedding-3-small")
 
     # create the vector store
     vector_store = langchain_chroma.Chroma.from_documents(
@@ -171,7 +170,7 @@ def test_run():
     pages = load_document()
 
     splitted_documents = split_text(pages)
-    vector_store = create_vector_store(splitted_documents)
+    create_vector_store(splitted_documents)
 
 
 # ======================================================================

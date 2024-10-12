@@ -2,26 +2,34 @@ A detailed page outlining the project scope, objectives, data sources, and featu
 
 ## Project Scope
 
-Domain area: Understanding AI Bootcamp 2024
+Domain area: Understanding and Finding Courses
 
 1. Course Structure Explainer
 
-    - This use case explains the structure of the AI bootcamp. Users can 
-    ask and get answers on how long the duration will be, what is the 
-    passing criteria for the course, so that they may make a decision on 
-    whether to commit to the course or not. Note that this is not meant to
-    answer questions on course content, such as limitations of AI, the 
-    reasons why AI can halluciate.
+    - This use case is to build an means to allow user to ask questions
+    regarding the AI bootcamp course. The belief is that there are still 
+    many people who prefer to receive the information by asking questions, 
+    instead of reading the PDF that is already posted on the Canvas site.
+    This belief is supported by the questions posted on the discussion 
+    forums, even though the answers are usually already given within the 
+    PDF info deck, or the FAQ page.
 
-2. Capstone Project Explainer (yet to implement)
+    - Users can ask and get answers on how long the duration will be, 
+    what is the passing criteria for the course, so that they may make a 
+    decision on whether to commit to the course or not. Note that this is 
+    *not* meant to answer questions on course content, such as limitations of 
+    AI, the reasons why AI can halluciate, or why building a RAG is usually
+    better than re-training a large language model.
 
-    - This use case explains about the capstone project.
+2. Prompt to search for courses from Skillsfuture (yet to implement)
+
+    - This use case explains about ...
 
 
 
 ## Objectives
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac fermentum arcu, sit amet gravida mauris. Curabitur elit turpis, pulvinar id hendrerit at, sollicitudin ac arcu. Duis at accumsan dolor. Maecenas feugiat dui vel sem commodo dictum. Aliquam eu tortor ac justo vestibulum ullamcorper. Phasellus risus diam, tincidunt eu semper a, fringilla non nisl. Duis lobortis sollicitudin libero ut vestibulum. Curabitur suscipit orci leo, vitae rutrum erat aliquet sed. Mauris et consequat sem. Ut pretium, eros vel convallis rhoncus, risus urna dictum libero, quis ultricies enim justo egestas mi.
+The course explainer uses a RAG to generate a response to the question.
 
 Etiam et mi velit. Praesent enim nibh, luctus vitae pulvinar eget, tempus ac augue. Nunc sapien metus, dictum eu nisi efficitur, vulputate porttitor ante. Morbi sit amet velit dui. Nulla eget arcu hendrerit, mollis massa a, hendrerit odio. Nulla vel elit est. Nulla sed pellentesque risus. Praesent non dolor massa.
 
@@ -31,11 +39,13 @@ The following will be the data sources for the use cases.
 
 1. Course Structure Explainer
 
-    - "Info Deck on AI Bootcamp" from the Canvas Learning Management System. 
+    - [Info Deck on AI Bootcamp](https://d17lzt44idt8rf.cloudfront.net/aicamp/shared/AI%20Champion%20Bootcamp%20-%20Pilot%2002%20-%20Info%20Deck.pdf) from the Canvas Learning Management System. 
 
-2. Capstone Project Explainer 
+    - [FAQ](https://canvas.instructure.com/courses/9748108/pages/faqs?module_item_id=112615241) page from the Canvas Learning Management System.
 
     - "Info Deck on Project Phase" from the Canvas Learning Management System. 
+
+2. Prompt to search for courses from Skillsfuture (yet to implement)
 
 ## Features
 

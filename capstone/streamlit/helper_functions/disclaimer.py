@@ -22,7 +22,7 @@ import streamlit as st
 # ======================================================================
 # Global variables
 
-FILEPATH_DISCLAIMER = "./data/disclaimer.txt"
+FILEPATH_DISCLAIMER = "./data/disclaimer.md"
 
 # ======================================================================
 

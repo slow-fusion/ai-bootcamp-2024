@@ -18,7 +18,7 @@ import streamlit as st
 
 # ======================================================================
 # Global variables
-FILEPATH_ABOUTUS = "./data/about_us.txt"
+FILEPATH_ABOUTUS = "./data/about_us.md"
 
 # ======================================================================
 

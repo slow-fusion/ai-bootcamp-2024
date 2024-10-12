@@ -26,7 +26,7 @@ import streamlit as st
 # ======================================================================
 # Helper functions
 # ======================================================================
-FILEPATH_METHODOLOGY = "./data/methodology.txt"
+FILEPATH_METHODOLOGY = "./data/methodology.md"
 
 # ======================================================================
 # Main script

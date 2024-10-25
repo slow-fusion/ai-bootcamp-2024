@@ -130,12 +130,6 @@ def split_text(pages):
     returns it as Document objects.
     """
 
-    # text_splitter = langchain.text_splitter.RecursiveCharacterTextSplitter(
-    #    separators=["\n\n", "\n", " ", ""],
-    #    chunk_size=500,
-    #    chunk_overlap=50,
-    #    length_function=count_tokens
-    # )
     text_splitter = SemanticChunker(OpenAIEmbeddings(model="text-embedding-3-small"))
 
     splitted_documents = text_splitter.split_documents(pages)
@@ -146,7 +140,7 @@ def split_text(pages):
 def create_vector_store(splitted_documents):
     """
     Given a list of Document objects, create a vector store for subsequent
-    retrieval. Saves it to disk as "./chroma_langchain.db".
+    retrieval. Saves it to disk as "./aibootcamp_db".
     Returns the created vector store.
     """
 
@@ -158,7 +152,7 @@ def create_vector_store(splitted_documents):
         collection_name="ai_bootcamp_info_deck",
         documents=splitted_documents,
         embedding=embeddings_model,
-        persist_directory="./chroma_langchain_db",
+        persist_directory="./aibootcamp_db",
     )
 
     return vector_store

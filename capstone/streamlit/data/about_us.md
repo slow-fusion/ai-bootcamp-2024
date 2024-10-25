@@ -21,17 +21,16 @@ Domain area: Understanding and Finding Courses
     AI, the reasons why AI can halluciate, or why building a RAG is usually
     better than re-training a large language model.
 
-2. Prompt to search for courses from Skillsfuture (yet to implement)
+2. Prompt to search for courses from Skillsfuture 
 
-    - This use case explains about ...
+    - This use case aims to build a prompt to allow users to use natural 
+    language to search for Skillsfuture courses. While there is an existing
+    website to search for such courses, it is a 'structured search', by 
+    specifying course type, training provider, course fees, and keywords. 
+    This course finder will allow users to use unstructured natural language
+    to search courses, which is powered by a large language model under the
+    hood, assisted by retrieval-augmented generation.
 
-
-
-## Objectives
-
-The course explainer uses a RAG to generate a response to the question.
-
-Etiam et mi velit. Praesent enim nibh, luctus vitae pulvinar eget, tempus ac augue. Nunc sapien metus, dictum eu nisi efficitur, vulputate porttitor ante. Morbi sit amet velit dui. Nulla eget arcu hendrerit, mollis massa a, hendrerit odio. Nulla vel elit est. Nulla sed pellentesque risus. Praesent non dolor massa.
 
 ## Data Sources
 
@@ -45,12 +44,14 @@ The following will be the data sources for the use cases.
 
     - "Info Deck on Project Phase" from the Canvas Learning Management System. 
 
-2. Prompt to search for courses from Skillsfuture (yet to implement)
+2. Skillsfuture Course Finder to search for courses from Skillsfuture 
 
-## Features
+    - Skillsfuture course directory
+    Skillsfuture SG (SSG) provides a number of APIs to allow developers 
+    to interact with them. One of these APIs allow access to SSG's course 
+    information. Through the API, I downloaded a list of the first 500 
+    digital courses to be used as the data source for searching SSG courses.
 
-Placeholder text. 
-Nunc lacinia elit et nisl lacinia gravida. Nulla sed ligula condimentum, tempor sapien at, pellentesque nulla. Integer faucibus, felis ac hendrerit malesuada, elit erat maximus tellus, nec condimentum sapien sem id dui. Mauris ac pulvinar erat. Donec ante quam, lacinia sagittis molestie non, vulputate et sem. Nunc lorem nulla, pulvinar euismod semper at, posuere ac quam. Vestibulum eu sapien vitae metus auctor cursus quis vel erat. Praesent nulla nulla, tincidunt non sagittis a, elementum a dui. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse non urna ante. 
 
 
 

@@ -6,7 +6,7 @@ This part contains the code for the Streamlit web application.
 
 To build the Docker image locally for testing, use the following command.
 
-    <to be updated>
+    docker build -t abc2024-query .
 
 To run the Docker image locally for testing, use the following command.
 

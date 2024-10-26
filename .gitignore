@@ -3,7 +3,8 @@ test/
 notebooks/
 
 # Chroma database
-chroma_langchain_db/
+*_db/
+*_db
 
 # Streamlit secret directory
 .streamlit/

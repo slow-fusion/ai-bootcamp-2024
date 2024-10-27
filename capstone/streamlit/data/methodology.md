@@ -8,7 +8,7 @@ For the first use case, the data sources (PDFs and text) are manually taken
 from the AI Bootcamp website.
 
 For the Skillsfuture Course Finder, I wrote a script to access the SSG API 
-from [SSG Developer site](https://developer.ssg-wsg.gov.sg/webapp/home) to
+from [SSG Developer site](https://developer.ssg-wsg.gov.sg) to
 download the first 500 courses with the keyword "digital". It should be 
 noted that this is a subset of the entire course directory; this was 
 intentionally done to limit the size of the vector store required later 

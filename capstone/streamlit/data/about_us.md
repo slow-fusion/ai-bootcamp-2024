@@ -46,11 +46,12 @@ The following will be the data sources for the use cases.
 
 2. Skillsfuture Course Finder to search for courses from Skillsfuture 
 
-    - Skillsfuture course directory
-    Skillsfuture SG (SSG) provides a number of APIs to allow developers 
-    to interact with them. One of these APIs allow access to SSG's course 
-    information. Through the API, I downloaded a list of the first 500 
-    digital courses to be used as the data source for searching SSG courses.
+    - Skillsfuture course directory from Skillsfuture SG (SSG) 
+    [developer site](https://developer.ssg-wsg.gov.sg) provides a number 
+    of APIs to allow developers to interact with them. One of these APIs 
+    allow access to SSG's course information. Through the API, I downloaded 
+    a list of the first 500 digital courses to be used as the data source 
+    for searching SSG courses.
 
 
 

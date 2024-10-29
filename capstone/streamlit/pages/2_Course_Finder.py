@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
 """
 # ======================================================================
-# Course_Finder.py
+# 2_Course_Finder.py
 # ======================================================================
 # Created as submission for
 # Govtech AI Bootcamp 2024
-# Week 8 - Deploying Streamlit App
 #
 # Lee Woei Chieh (MINDEF)
 # Updated on 20 Oct 2024
@@ -14,13 +13,6 @@
 
 # ======================================================================
 # Common imports
-
-# Readjusted the style of import, so that the namespace is not as crowded,
-# at the cost of more verbose commands
-# Instead of "from xxx import yyy" to "import xxx"
-# E.g. instead of "from dotenv import load_dotenv"
-#              to "import dotenv"
-#                 "dotenv.load_dotenv()"
 
 import streamlit as st
 import pandas as pd
@@ -79,9 +71,6 @@ def main():
         st.write(response)
 
         st.divider()
-
-        # df_course_details = pd.json_normalize(course_details)
-        # st.dataframe(df_course_details)
 
         print(f'User Input is "{user_prompt}"')
 

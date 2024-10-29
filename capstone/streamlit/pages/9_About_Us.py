@@ -5,7 +5,6 @@
 # ======================================================================
 # Created as submission for
 # Govtech AI Bootcamp 2024
-# Week 7 - Quick Prototyping with Streamlit
 #
 # Lee Woei Chieh (MINDEF)
 # 14 Sep 2024
@@ -35,7 +34,7 @@ FILEPATH_ABOUTUS = "./data/about_us.md"
 def main():
     st.set_page_config(page_title="About Us")
 
-    with open(FILEPATH_ABOUTUS, 'r') as f:
+    with open(FILEPATH_ABOUTUS, "r") as f:
         TEXT_ABOUTUS = f.read()
 
     st.title("About this App")

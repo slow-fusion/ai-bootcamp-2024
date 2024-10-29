@@ -43,8 +43,6 @@ import langchain_chroma
 # ======================================================================
 
 
-
-
 # Functions to retrieve RAG queries
 filepath_vector_store = "./data/chroma_langchain_db"
 filepath_vector_store_course_finder = "./data/ssg_courses_db"

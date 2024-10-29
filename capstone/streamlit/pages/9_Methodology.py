@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
 
 # ======================================================================
-# 9_About_Us.py
+# 9_Methodology.py
 # ======================================================================
 # Created as submission for
 # Govtech AI Bootcamp 2024
-# Week 7 - Quick Prototyping with Streamlit
 #
 # Lee Woei Chieh (MINDEF)
 # 14 Sep 2024
@@ -37,11 +36,10 @@ def main():
 
     st.title("Methodology")
 
-    with open(FILEPATH_METHODOLOGY, 'r') as f:
+    with open(FILEPATH_METHODOLOGY, "r") as f:
         TEXT_METHODOLOGY = f.read()
 
     st.write(TEXT_METHODOLOGY)
-
 
 
 # End of main script

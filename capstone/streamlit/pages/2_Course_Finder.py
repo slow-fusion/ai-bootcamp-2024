@@ -56,9 +56,11 @@ def main():
     form.subheader("Describe the SkillsFuture course you are looking for.")
 
     user_prompt = form.text_area(
-        "I will search the Skillsfuture directory "
-        "and recommend some courses for you.\n\n "
-        "Example: What courses are good to learn about generative AI?",
+        "I will search the Skillsfuture directory and recommend some "
+        "courses for you. Unfortunately, I am only loaded with information "
+        "on 500 digital-related courses, but I will try my best. \n\n"
+        "Example: What courses are good to learn about generative AI? "
+        "Or how can I learn about making web applications?",
         height=200,
     )
 

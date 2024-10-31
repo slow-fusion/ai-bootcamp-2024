@@ -32,5 +32,6 @@ COPY --chown=app:app . ./
 # Informs Docker that the container will listen on port 8501 at runtime. 
 # This is used for documentation purposes and does not actually publish the port.
 EXPOSE 8501
+
 # Specifies the command to run when the container starts. In this case, it runs a Streamlit application using the `main.py` script.
 CMD streamlit run Home.py

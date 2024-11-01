@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-""" Contains a collection of test programs to check parsedoc.py
+""" Contains a collection of test programs to check parsejson.py
 """
 
 # ======================================================================
@@ -97,7 +97,7 @@ Answer:
 
 
 def main():
-    """Parses the given document using AISAY into structured output."""
+    """Tests the retrieval from the vector store."""
 
     # print(
     #    "This file contains the common helper functions used in Streamlit.\n"
